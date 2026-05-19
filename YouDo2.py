@@ -1,10 +1,4 @@
+movie_title = 'The Godfather'
+release_year = 1900
 
-age = 25
-height = 5.9
-
-
-name = "Arjun"
-greeting = f"Hello, my name is {name} and I am {age} years old."
-
-print(greeting)
-print("Type of age:", type(age))
+print(f'The movie {movie_title} was released in {release_year}.')
