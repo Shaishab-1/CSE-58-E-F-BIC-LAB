@@ -1,12 +1,22 @@
 text = input().strip()
-pattern = input().strip()
+k = int(input())
 
-count = 0
-
-k = len(pattern)
+counts = {}
 
 for i in range(len(text) - k + 1):
-  if text[i:i+k] == pattern:
-    count += 1
+  pattern = text[i:i+k]
 
-print(count) 
+  if pattern in counts:
+    counts[pattern] += 1
+  else:
+    counts[pattern] = 1
+
+  max_count = max(counts.values())
+
+  result = []
+
+  for pattern in counts:
+    if counts[pattern] == max_count:
+      result.append(pattern)
+
+print(result)
